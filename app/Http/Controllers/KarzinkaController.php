@@ -203,7 +203,7 @@ class KarzinkaController extends Controller
     public function categoryProduct($id,Request $request) {
 
         $category=Category::where('id',$id)->first();
-        // $category=Category::where('id',$id)->with('products')->first();
+        // $category=Category::with('products')->first();
         $products=Product::where('categoryId',$id)->get();
 
       
@@ -333,7 +333,7 @@ class KarzinkaController extends Controller
            return redirect()->route('allProducts');
         }
 
-        public function productBasket($id,Request $request){
+        public function   productBasket($id,Request $request){
               
                    
         $user=User::where('id',Auth::User()->id)->first();
@@ -654,27 +654,4 @@ public function allProductBasket($id,Request $request){
         }
 
 
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-

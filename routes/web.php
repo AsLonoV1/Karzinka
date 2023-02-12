@@ -104,3 +104,5 @@ Route::get('/categoryCreate', function () {
     Route::get('/allProducts',[KarzinkaController::class,'allProducts'])->name('allProducts');
 
     Route::get('/allProducts1',[KarzinkaController::class,'allProducts'])->name('allProducts');
+  
+    
